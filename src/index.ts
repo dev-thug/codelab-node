@@ -5,7 +5,9 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-const inputs = [];
+const inputs: string[] = [];
+
+const solution = (inputs: string[]) => {};
 
 rl.on("line", (line) => {
   inputs.push(line);
@@ -16,5 +18,6 @@ rl.on("line", (line) => {
 });
 
 rl.on("close", () => {
+  solution(inputs);
   process.exit();
 });
