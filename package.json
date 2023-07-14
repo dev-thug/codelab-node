@@ -1,17 +1,32 @@
 {
   "name": "codelab-node",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "tsc && node ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-thug/codelab-node.git"
   },
-  
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^20.3.3",
+  "author": {
+    "name": "Hyunjoong",
+    "email": "de0978@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "tslint": "^6.1.3",
     "typescript": "^5.1.6"
+  },
+  "bugs": {
+    "url": "https://github.com/dev-thug/codelab-node/issues"
+  },
+  "homepage": "https://github.com/dev-thug/codelab-node#readme",
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "prepublish": "npm run build"
   }
 }
